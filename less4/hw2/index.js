@@ -16,6 +16,7 @@ for (let i = m; i <=n; i++) {
     }
     else if (i % 5 === 0 ) {
         result == i;
+        /*console.log(i); */
     }
     else {
         continue;
