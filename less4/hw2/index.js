@@ -15,14 +15,25 @@ for (let i = m; i <=n; i++) {
         result *= i;
     }
     else if (i % 5 === 0 ) {
-        result == i;
-        /*console.log(i); */
+       /* result == i;*/
+        console.log(i); 
     }
     else {
         continue;
     }
 }
-console.log(result);
+/*console.log(result);*/
+
+
+
+
+
+
+
+
+
+
+
 
 /*Создайте цикл, который в зависимости от кратности числа будет применять к нему разные математические операции. Число целое от m до n
 
