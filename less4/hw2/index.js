@@ -18,9 +18,9 @@ for (let i = m; i <=n; i++) {
        /* result == i;*/
         console.log(i); 
     }
-    else {
+    /*else {
         continue;
-    }
+    }*/
 }
 /*console.log(result);*/
 
