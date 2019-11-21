@@ -14,7 +14,7 @@ if (null) {
     console.log('Else');
 }
 
-const age = 25;
+const age = 46;
 
 if (age < 16) {
     console.log('Too young');
