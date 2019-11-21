@@ -1,10 +1,11 @@
 let sum = 0;
 
 for (let i = 0; i <= 1000; i++) {
-    if (i % 2 !== 0){
+    if (i % 2 != 0){
         console.log('Found');
         sum +=i;
     }
+}
     if (sum * 5 > 5000){
         console.log('Bigger');
     }
@@ -12,4 +13,3 @@ for (let i = 0; i <= 1000; i++) {
         console.log('Smaller or equal');
     }
 
-}
