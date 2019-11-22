@@ -11,6 +11,7 @@ function sum (from, to){
     for (x = from; x <= to; x++){
         result += x;
     }
+    
     return result;
 }*/
 
