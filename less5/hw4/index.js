@@ -1,4 +1,4 @@
-function compareSums(a, b, c, d) {
+/*function compareSums(a, b, c, d) {
     if (sum(a + b) > sum(c + d)){
         console.log (true);
     } else {
@@ -12,9 +12,9 @@ function sum (from, to){
         result += x;
     }
     return result;
-}
+}*/
 
-/*function compareSums(a, b, c, d) {
+function compareSums(a, b, c, d) {
 
     if ((a + b) > (c + d)){
         console.log(true);
@@ -29,4 +29,4 @@ function sum (from, to){
         result += x;
     }
     return result;
-}*/
+}
