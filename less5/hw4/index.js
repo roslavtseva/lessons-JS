@@ -1,14 +1,14 @@
 function compareSums(a, b, c, d) {
     if (sum(a + b) > sum(c + d)){
-        console.log (true);
+        return (true);
     } else {
-        console.log (false);
+        return (false);
     }
 }
 
 function sum (from, to){
-    let x = 0;
-    for (x = from; x <= to; x++){
+    let result = 0;
+    for (let x = from; x <= to; x++){
         result += x;
     }
 
