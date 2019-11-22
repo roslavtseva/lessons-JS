@@ -1,8 +1,17 @@
-let n = 10;
-getPrimes:
-for (let i = 1; i <= n; i++) { 
-  for (let h = 2; h < i; h++) { 
-    if (i % h == 0) continue getPrimes; 
+
+
+function getPrimes(n) {
+  for (let i = 1; i <= n; i++) {
+      if (isPrime(i)) console.log(i);
   }
-  console.log(i); 
 }
+
+function isPrime(n) {
+  for (let h = 2; h < n; h++) {
+      if (n % h === 0) return false;
+  }
+  return true;
+}
+
+getPrimes(50);
+
