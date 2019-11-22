@@ -4,9 +4,9 @@
 function findDivCount(a, b, n) {
     let result = 0;
     for (let i = a; i <= b; i++) {
-        if (i % n) {
-            result++
-        }
+        if (i % n) continue;
+        result++;
     }
     return result;
 }
+findDivCount(10, 20, 2)
