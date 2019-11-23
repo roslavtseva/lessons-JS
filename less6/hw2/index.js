@@ -1,12 +1,13 @@
 
-function reverseArray(arr){
-    if (!Array.isArray(arr)) return null;
-
+function reverseArray(arr) {
+    if (!Array.isArray(arr)) {
+        return null;
+    }
     const x = [];
-    for(const i of arr){
+    for (let i of arr) {
         x.slice(i).reverse(i);
     }
-   return x;
+    return x;
 }
 
 
