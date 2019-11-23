@@ -1,3 +1,23 @@
+
+function getSum(arr){
+    if(!Array.isArray(arr)) return null;
+    let sum = 0;
+    for (let i of arr) {
+        sum += i;
+    }
+    return sum;
+}
+
+
+
+
+
+
+
+
+
+/*   also right=>
+
 const numbers = [11, 22, 33, 44, 55];
 
 
@@ -7,7 +27,7 @@ for (let i = 0; i < numbers.length; i++){
     sumOfNumbers += (numbers[i]);
 }
 
-console.log(sumOfNumbers);
+console.log(sumOfNumbers);*/
 
 /*Создайте функцию getSum, которая будет принимать массив чисел и врнет сумму всех элементов
 
