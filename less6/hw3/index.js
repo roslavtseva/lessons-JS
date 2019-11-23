@@ -15,7 +15,7 @@ function sortAsc(array){
 
 }
 
-function sortAsc(array){
+function sortDesc(array){
     if(!Array.isArray(array)) {return null;}
     const massive = [];
     for (let i = 0; i < massive.length; i++){
