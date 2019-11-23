@@ -2,7 +2,7 @@
 function reverseArray(arr){
     if (!Array.isArray(arr)) return null;
 
-    const x = arr;
+    let x = arr;
      x.reverse();
 
    return x;
