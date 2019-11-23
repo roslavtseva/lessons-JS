@@ -16,7 +16,7 @@ function getSum(arr){
 
 
 
-/*   also right=>
+/*   it's mean=>
 
 const numbers = [11, 22, 33, 44, 55];
 
