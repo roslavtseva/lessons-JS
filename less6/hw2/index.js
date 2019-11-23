@@ -2,8 +2,8 @@
 function reverseArray(arr){
     if (!Array.isArray(arr)) return null;
 
-    const x = [];
-     x.reverse(arr);
+    const x = arr;
+     x.reverse();
 
    return x;
 }
