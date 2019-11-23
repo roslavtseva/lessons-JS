@@ -3,9 +3,8 @@ function reverseArray(arr){
     if (!Array.isArray(arr)) return null;
 
     const x = [];
-    for(let i of arr){
-        x.reverse(arr);
-    }
+     x.reverse(arr);
+
    return x;
 }
 
