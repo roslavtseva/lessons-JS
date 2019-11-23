@@ -1,20 +1,33 @@
 function sortAsc(array){
+    if(!Array.isArray(array)) {return null;}
 
-    const x = [];
-    for (let i of array){
-        x.sort();
+    const massive = [];
+    for (let i = 0; i < massive.length; i++){
+        for (let x = 0; x < massive.length; i++){
+            if (massive[i] > massive[j]){
+                let result = massive[i];
+                massive[i] = massive[j];
+                massive[x] = result;
+            }
+        }
     }
-    return x;
+    return massive;
 
 }
 
-function sortDesc(array){
-
-    const c = [];
-    for (let i of array){
-        c.sort().reverse();
+function sortAsc(array){
+    if(!Array.isArray(array)) {return null;}
+    const massive = [];
+    for (let i = 0; i < massive.length; i++){
+        for (let x = 0; x < massive.length; i++){
+            if (massive[i] < massive[j]){
+                let result = massive[i];
+                massive[i] = massive[j];
+                massive[x] = result;
+            }
+        }
     }
-    return c;
+    return massive;
 
 }
 
