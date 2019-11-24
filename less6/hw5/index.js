@@ -1,16 +1,11 @@
 
-function removeDuplicates(array) {
+function removeDuplicates(arr) {
     const array = [];
-    const uniqArray = [... new Set(array)];
-    return uniqArray;
-};
+    const uniqArray = array.filter((item, index) =>
+     index === array.indexOf(item));  // indexOf  шукає переше появлення елемента в середині масиву => буде повертати перший індекс елем який він знайшов (якщо елем повторюється то індекс в нього той самий)
 
-
-
-
-
-
-
+   return index;
+}
 
 
 
