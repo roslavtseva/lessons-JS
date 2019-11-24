@@ -10,7 +10,7 @@ function checker(arr) {
           min = array[x];
       }
   }
-  if ((min + max) > 1000){
+  if (min + max > 1000){
       return true;
   } return false;
 }
