@@ -3,12 +3,13 @@ function uniqueCount(array){
         return null;
     }
     let uniqueArray = [];
-    for(let i = 0; i < array.length; i++){
-         if (uniqueArray.indexOf(array[i]) < 0) {
+
+    for(let i = 0; i < array.length; i++){  //перебор
+         if (uniqueArray.indexOf(array[i]) < 0) {  //якщо індекс елем масиву < 0 то додаємо його до масиву
              uniqueArray.push(array[i]);
          }
     }
-    return uniqueArray.length > 0 ? uniqueArray.length : null;
+    return uniqueArray.length > 0 ? uniqueArray.length : null; // якщо довжина масиву > 0 то повертаємо її , якщо ні - налл
 }
 
 
