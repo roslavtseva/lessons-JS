@@ -1,11 +1,11 @@
 
 function getSum(arr){
     if(!Array.isArray(arr)) return null;
-    let sum = 0;
-    for (let i of arr) {
-        sum += i;
+    let sum = 0; //стартове значення
+    for (let i of arr) { //для всіх елементів масиву
+        sum += i; // до змінної sum додаєм кожен елемент
     }
-    return sum;
+    return sum; //повертаєм суму
 }
 
 

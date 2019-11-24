@@ -10,7 +10,7 @@ function uniqueCount(array) {
             uniqueArray.push(array[i]); //додаємо його 
         }
     }
-    return uniqueArray.length > 0 ? uniqueArray.length : null; // повертаємо довжину масиву (кількість унікальних чисел), якщо такого нема - null
+    return uniqueArray.length > 0 ? uniqueArray.length : null; // повертаємо довжину масиву (кількість унікальних чисел), якщо таких нема - null
 }
 
 
