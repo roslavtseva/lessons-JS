@@ -8,12 +8,7 @@ function uniqueCount(array){
              uniqueArray.push(array[i]);
          }
     }
-    if (uniqueArray.length > 0) {
-         uniqueArray.length;
-    } else {
-        return null;
-    }
-    return uniqueArray;
+    return uniqueArray.length > 0 ? uniqueArray.length : null;
 }
 
 
