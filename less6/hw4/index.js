@@ -1,15 +1,16 @@
-function uniqueCount(array){
-    if(!Array.isArray(array)){
+function uniqueCount(array) {
+    if (!Array.isArray(array)) {
         return null;
     }
-    let uniqueArray = [];
+    // якщо елемент присутній в масиві то indexOf == 0; якщо ні то indexOf == -1;
 
-    for(let i = 0; i < array.length; i++){  //перебор
-         if (uniqueArray.indexOf(array[i]) < 0) {  //якщо індекс елем масиву < 0 то додаємо його до масиву
-             uniqueArray.push(array[i]);
-         }
+    let uniqueArray = []; //масив для унікальних чисел
+    for (let i = 0; i < array.length; i++) {  //перебираємо
+        if (uniqueArray.indexOf(array[i]) < 0) {  // якщо індекс елемента  < 0 (значить він ще не порапив у масив унікальний чисел)
+            uniqueArray.push(array[i]); //додаємо його 
+        }
     }
-    return uniqueArray.length > 0 ? uniqueArray.length : null; // якщо довжина масиву > 0 то повертаємо її , якщо ні - налл
+    return uniqueArray.length > 0 ? uniqueArray.length : null; // повертаємо довжину масиву (кількість унікальних чисел), якщо такого нема - null
 }
 
 
