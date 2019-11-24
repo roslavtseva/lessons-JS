@@ -1,11 +1,8 @@
 
-function removeDuplicates(arr) {
     const array = [];
-    const uniqArray = array.filter((item, index) =>
-     index === array.indexOf(item));  // indexOf  шукає переше появлення елемента в середині масиву => буде повертати перший індекс елем який він знайшов (якщо елем повторюється то індекс в нього той самий)
-
-   return index;
-}
+    const removeDuplicates = array.reduce((uniq, item) => {
+        return uniq.includes(item) ? uniq : [...uniq, item];
+}, [])
 
 
 
