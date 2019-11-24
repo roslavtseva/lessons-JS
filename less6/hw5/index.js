@@ -1,11 +1,11 @@
-function uniqueCount(array){
+function removeDuplicates(array){
     if(!Array.isArray(array)){
         return null;
     }
     let uniqueArray = [];
 
-    for(let i = 0; i < array.length; i++){  //перебор
-         if (uniqueArray.indexOf(array[i]) < 0) {  //якщо індекс елем масиву < 0 то додаємо його до масиву
+    for(let i = 0; i < array.length; i++){  
+         if (uniqueArray.indexOf(array[i]) < 0) {  
              uniqueArray.push(array[i]);
          }
     }
