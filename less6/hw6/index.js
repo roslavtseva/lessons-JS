@@ -13,10 +13,10 @@ function withdraw(clients, balances, client, amount) {
     for (let x = 0; x < balances.length; x++) { // пробіг по балансах
         if (balances[x] == amount) { //приєднюєм баланс до запиту, якщо вони однакові виводиться значення елемента
             index == x;
-        } if (balances[x] < amount) { //якщо баланс менший за запит 
-            return -1; //виводим -1
-        } else { //якщо баланс більший за запит
-            return balances[x] - amount;  //виводим різницю
+        } if (balances[x] > amount) { //якщо баланс бильший за запит 
+            return balances[x] - amount; //виводим різницю
+        } else { //якщо баланс менший за запит
+            return -1;  //виводим -1
         }
     }
 }
