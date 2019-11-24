@@ -1,35 +1,45 @@
-function sortAsc(array){
-    if(!Array.isArray(array)) {return null;}
+function sortAsc(myArray) {
+    if (!Array.isArray(myArray)) { 
+        return null; 
+    }
 
-    const massive = [];
-    for (let i = 0; i < massive.length; i++){
-        for (let x = 0; x < massive.length; i++){
-            if (massive[i] > massive[j]){
-                let result = massive[i];
-                massive[i] = massive[j];
-                massive[x] = result;
+    const [...array] = myArray;  //деструктуризація оператором спред дістаю доступ до всіх елем масиву
+    let result = 0; //задаю стартове значення
+
+    for (let i = 0; i < array.length; i++) {  //перебираю масив 
+        for (let x = 0; x < array.length; x++) {
+            if (array[x] > array[x + 1]) {
+                 result = array[x];
+                array[x] = array[x + 1];
+                array[x + 1] = result;
             }
         }
     }
-    return massive;
+    return array;
 
 }
 
-function sortDesc(array){
-    if(!Array.isArray(array)) {return null;}
-    const massive = [];
-    for (let i = 0; i < massive.length; i++){
-        for (let x = 0; x < massive.length; i++){
-            if (massive[i] < massive[j]){
-                let result = massive[i];
-                massive[i] = massive[j];
-                massive[x] = result;
+function sortDesc(myArray) {
+    if (!Array.isArray(myArray)) { 
+        return null; 
+    }
+
+    const [...array] = myArray;  //деструктуризація оператором спред дістаю доступ до всіх елем масиву
+    let result = 0; //задаю стартове значення
+
+    for (let i = 0; i < array.length; i++) {  //перебираю масив 
+        for (let x = 0; x < array.length; x++) {
+            if (array[x] < array[x + 1]) {
+                 result = array[x];
+                array[x] = array[x + 1];
+                array[x + 1] = result;
             }
         }
     }
-    return massive;
+    return array;
 
 }
+
 
 
 
