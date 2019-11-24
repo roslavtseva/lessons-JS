@@ -9,13 +9,13 @@ function checker(arr) {
         if (arr[x] < min) {
             min = array[x];
         }
-    }
+    };
     if (min + max > 1000) {
         return true;
     } else { 
         return false; 
     }
-}
+};
 
 
 
