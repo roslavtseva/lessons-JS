@@ -7,11 +7,11 @@ function withdraw(clients, balances, client, amount) {
     for (let x = 0; x < clients.length; x++) { //пробіг по елементах clients
         if (clients[x] == client) {  //приєднюєм індекс елемента клієнта до імя клієнта, якщо вони однакові виводиться значення елемента
             index == x;  //задаєм значення в змінну
-        }
-
-        if (balances[index] > amount) {
-            balances[index] -= amount;
-            return balances;
+            
+            if (balances[index] > amount) {
+                balances[index] -= amount;
+                return balances;
+            }
         }
         return -1;
     }
