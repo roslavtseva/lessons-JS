@@ -12,8 +12,8 @@ function withdraw(clients, balances, client, amount) {
                 balances[index] -= amount;
                 return balances;
             }
+            return -1;
         }
-        return -1;
     }
 }
 
