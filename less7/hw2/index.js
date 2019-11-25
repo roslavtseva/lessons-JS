@@ -1,18 +1,18 @@
 //const arr = [1, 2, 3, 4, 5];
 
-const firstArray = arr => {
+const reveseArray = arr => {
 
     if (!Array.isArray) {
         return null;
     }
 
-    const reveseArray = arr
+    const newArray = arr
         .slice().reverse(); //розділяємо і перевертаємо масив
-    return reveseArray; //повертаємо новий масив щоб не змінювати вхідний
+    return newArray; //повертаємо новий масив щоб не змінювати вхідний
 
 };
 
-//console.log(firstArray(arr));
+//console.log(reveseArray(arr));
 
 
 
