@@ -4,21 +4,21 @@ const balances = [100, 200, 300, 400];
 function withdraw(clients, balances, client, amount) {
     let index = 0;
 
-    for (let x = 0; x < clients.length; x++) { //пробіг по елементах clients
-        if (clients[x] == client) {  //приєднюєм індекс елемента клієнта до імя клієнта, якщо вони однакові виводиться значення елемента
-            index == x;  //задаєм значення в змінну
+    for (let x = 0; x < clients.length; x++) { 
+        if (clients[x] == client) {  
+            index == x;  
             
             if (balances[index] > amount) {
                 balances[index] -= amount;
                 return balances;
             }
-            return -1;
+            
         }
     }
+    return -1;
 }
 
 console.log(withdraw(clients, balances, 'Sasha', 150));
-
 
 
 
