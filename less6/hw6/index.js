@@ -2,7 +2,7 @@ const clients = ['Sasha', 'Kyryl', 'Illya', 'Danya'];
 const balances = [100, 200, 300, 400];
 
 function withdraw(clients, balances, client, amount) {
-    let index = 0; 
+    let index = 0;
 
     for (let x = 0; x < clients.length; x++) { //пробіг по елементах clients
         if (clients[x] == client) {  //приєднюєм індекс елемента клієнта до імя клієнта, якщо вони однакові виводиться значення елемента
@@ -10,18 +10,14 @@ function withdraw(clients, balances, client, amount) {
         }
     }
 
-    for (let x = 0; x < balances.length; x++) { // пробіг по балансах
-        if (balances[x] == amount) { //приєднюєм баланс до запиту, якщо вони однакові виводиться значення елемента
-            index == x;
-        } if (balances[x] > amount) { //якщо баланс бильший за запит 
-            return balances[x] - amount; //виводим різницю
-        } else { //якщо баланс менший за запит
-            return -1;  //виводим -1
-        }
-    }
+
+    if (balances[index] < amount){ //від балансу віднмаєм суму виводу и повертаєм в мсив залишок
+        return -1;
+    } else { (balances[index] -= amount);
+        return balances }
 }
 
-console.log(withdraw(clients, balances, 'Sasha', 50));
+console.log(withdraw(clients, balances, 'Sasha', 150));
 
 
 
