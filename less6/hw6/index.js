@@ -1,6 +1,36 @@
 const clients = ['Sasha', 'Kyryl', 'Illya', 'Danya'];
 const balances = [100, 200, 300, 400];
 
+
+
+
+function withdraw(clients, balances, client, amount) {
+    let index = 0;
+    for (let i = 0; i < clients.length; i++) {
+        if (clients[i] === client) {
+            index = i;
+            break;
+        }
+    }
+​
+    if (balances[index] >= amount) {
+        balances[index] -= amount;
+        return balances[index];
+    }
+​
+    return -1;
+}
+
+
+console.log(withdraw(clients, balances, 'Sasha', 150))
+
+
+
+
+/*
+
+проблема з областю видимості
+
 function withdraw(clients, balances, client, amount) {
     let index = 0;
 
@@ -18,7 +48,7 @@ function withdraw(clients, balances, client, amount) {
     }
 }
 
-console.log(withdraw(clients, balances, 'Sasha', 150));
+console.log(withdraw(clients, balances, 'Sasha', 150));*/
 
 
 
