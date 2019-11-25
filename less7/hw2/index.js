@@ -4,7 +4,7 @@ const reveseArray = arr => {
     
     if(!Array.isArray){
         return null;
-    };
+    }
 
     const newArray = arr
     .slice().reverse(); //розділяємо і перевертаємо масив
@@ -12,8 +12,7 @@ const reveseArray = arr => {
 
 };
 
-console.log (reveseArray(arr));
- 
+console.log(reveseArray(arr));
 
 
 
