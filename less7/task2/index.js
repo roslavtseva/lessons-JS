@@ -1,5 +1,5 @@
 const sortDesc = numbers => 
-    numbers.slice().sort((a, b) => (a > b ? 1 : -1)); 
+    numbers.slice().sort((a, b) => (a < b ? 1 : -1)); 
 const arr = [1, 5, 3, 8, 33];
 console.log(sortDesc(arr));
 
