@@ -1,6 +1,30 @@
+//1. знайти студентів які здали екзамен
+//2. додати до ний повідомдення Good job
+
+const allStudents = ['Olya', 'Leonid', 'Ira', 'Yulia']; 
+const failedStudents = ['Leonid', 'Ira'];
 
 
 
+const getMessagesForBestStudents = (allStudents, failedStudents) => { 
+        const passedStudents = allStudents
+        .filter(name => !failedStudents.includes(name));  //здавші студенти це відфільтровані з allstudents методом видалення з масиву заваливших студентів  (name  - це елемент);
+
+        const messeges = passedStudents
+        .map(name => 'Good job, ' + name); //ств новий масив 
+        return messeges;
+};
+
+console.log(getMessagesForBestStudents(allStudents, failedStudents));
+
+/**     скорочено:
+ 
+const getMessagesForBestStudents = (allStudents, failedStudents) => 
+    allStudents
+    .filter(name => !failedStudents.includes(name));
+    .map(name => 'Good job, ' + name);
+    console.log(getMessagesForBestStudents(allStudents, failedStudents));
+ */
 
 
 
