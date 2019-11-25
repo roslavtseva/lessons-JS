@@ -13,9 +13,9 @@ function withdraw(clients, balances, client, amount) {
                 return balances;
             }
             
+            return -1;
         }
     }
-    return -1;
 }
 
 console.log(withdraw(clients, balances, 'Sasha', 150));
