@@ -8,13 +8,13 @@ function withdraw(clients, balances, client, amount) {
         if (clients[x] == client) {  
             index == x;  
             
-            if (balances[index] > amount) {
-                balances[index] -= amount;
+            if (balances[x] > amount) {
+                balances[x] -= amount;
                 return balances;
             }
             
+            return -1;
         }
-        return -1;
     }
 }
 
