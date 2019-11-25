@@ -1,6 +1,6 @@
 //const arr = [1, 2, 3, 4, 5];
 
-const reveseArray = arr => {
+const reverseArray = arr => {
 
     if (!Array.isArray) {
         return null;
