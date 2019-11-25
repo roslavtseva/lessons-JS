@@ -12,7 +12,7 @@ const reveseArray = arr => {
 
 };
 
-console.log(reveseArray(arr));
+//console.log(reveseArray(arr));
 
 
 
