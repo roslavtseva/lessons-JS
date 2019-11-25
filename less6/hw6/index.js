@@ -8,14 +8,13 @@ function withdraw(clients, balances, client, amount) {
         if (clients[x] == client) {  //приєднюєм індекс елемента клієнта до імя клієнта, якщо вони однакові виводиться значення елемента
             index == x;  //задаєм значення в змінну
         }
-    }
 
-
-    if (balances[index] > amount) {
-        balances[index] -= amount;
-        return balances;
+        if (balances[index] > amount) {
+            balances[index] -= amount;
+            return balances;
+        }
+        return -1;
     }
-    return -1;
 }
 
 console.log(withdraw(clients, balances, 'Sasha', 150));
