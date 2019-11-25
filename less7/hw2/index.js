@@ -1,13 +1,13 @@
 const arr = [1, 2, 3, 4, 5];
 
 const reveseArray = arr => {
-    
-    if(!Array.isArray){
+
+    if (!Array.isArray) {
         return null;
     }
 
     const newArray = arr
-    .slice().reverse(); //розділяємо і перевертаємо масив
+        .slice().reverse(); //розділяємо і перевертаємо масив
     return newArray; //повертаємо новий масив щоб не змінювати вхідний
 
 };
