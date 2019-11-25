@@ -4,10 +4,10 @@ function checker(arr) {
 
     for (let x = 0; x < arr.length; x++) {//перебор
         if (arr[x] > max) { //якщо елемент більший ніж в змінній
-            max = array[x]; //присвоюєм його значення змінній
+            max = arr[x]; //присвоюєм його значення змінній
         }
         if (arr[x] < min) { //так само але з меншим
-            min = array[x];
+            min = arr[x];
         }
     };
     if (min + max > 1000) {
