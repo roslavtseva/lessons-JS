@@ -13,12 +13,12 @@ function withdraw(clients, balances, client, amount) {
 
     if (balances[index] > amount) {
         balances[index] -= amount;
-        return balances[index];
+        return balances;
     }
     return -1;
 }
 
-//console.log(withdraw(clients, balances, 'Sasha', 150));
+console.log(withdraw(clients, balances, 'Sasha', 150));
 
 
 
