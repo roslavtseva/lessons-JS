@@ -11,7 +11,9 @@ const flatArray = arr => {
 console.log(flatArray(initArray));  // тестим функцію задаючи їй масив з елем
 
 
-
+/*або:
+const flatArray = arr => arr.flat();
+console.log(flatArray(initArray));*/
 
 /*Создайте функцию flatArray, которая будет принимать массив, элементами которого могут быть одномерные массивы и преобразует его в плоский массив
 
