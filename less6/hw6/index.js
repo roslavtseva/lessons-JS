@@ -11,10 +11,13 @@ function withdraw(clients, balances, client, amount) {
     }
 
 
-    if (balances[index] < amount){ //від балансу віднмаєм суму виводу и повертаєм в мсив залишок
-        return -1;
-    } else { (balances[index] -= amount);
-        return balances }
+    if (balances[index] > amount) {
+        balances[index] -= amount;
+        return balances[i];
+    }
+
+return -1;
+
 }
 
 console.log(withdraw(clients, balances, 'Sasha', 150));
