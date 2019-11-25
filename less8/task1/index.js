@@ -1,4 +1,4 @@
-//const arr = [1, 'text']
+const arr = ['a', 17.1, 'John Doe'];
 
 const transformToObject = arr => {
 
@@ -10,8 +10,8 @@ const transformToObject = arr => {
 
         return obj;
 };
-//const result = transformToObject(arr);
-//console.log(result);
+const result = transformToObject(arr);
+console.log(result);
 
 
 /**Создайте функцию, которая входящий массив преобразует в объект
