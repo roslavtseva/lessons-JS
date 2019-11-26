@@ -17,6 +17,11 @@ const getCustomersList = customersObj => {
     const customersNames = customersArr 
         .map[customer => customer[0]];
 
+    /*const sortByAge = customersNames
+    .sort(customer1, customer2) => customer.age - customer.age;
+
+    return sortByAge;*/
+
 };
 
 console.log()
