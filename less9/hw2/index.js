@@ -21,12 +21,12 @@
 */
 
 const getPeople = rooms => 
-Object.values(rooms)
+Object.values(rooms) //витягую значення в масив
 
 .reduce((acc, el) => {   
-    return acc.concat(el); 
+    return acc.concat(el);  //роблю масив плоским і обєднюю 
 }, [])
-    .map(el => el.name);
+    .map(el => el.name); //додаю відоюраження конкретного ел
 
 //console.log(getPeople(rooms));
 
