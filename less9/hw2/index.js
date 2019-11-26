@@ -1,4 +1,4 @@
-rooms = {
+/*rooms = {
     room1: [
         { name: 'room1 name1' },
         { name: 'room1 name2' },
@@ -18,6 +18,7 @@ rooms = {
     ],
     
 };
+*/
 
 const getPeople = rooms => 
 Object.values(rooms)
