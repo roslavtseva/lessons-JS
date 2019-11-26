@@ -27,7 +27,7 @@ Object.values(rooms)
 }, [])
     .map(el => el.name);
 
-console.log(getPeople(rooms));
+//console.log(getPeople(rooms));
 
 
 
