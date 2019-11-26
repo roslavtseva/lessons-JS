@@ -20,13 +20,15 @@ rooms = {
 };
 
 const getPeople = rooms => 
-Object.entries(rooms)
+Object.values(rooms)
 
-.reduce((acc, elem) => {   
-    return acc.concat(elem); 
-}, []);
+.reduce((acc, el) => {   
+    return acc.concat(el); 
+}, [])
+    .map(el => el.name);
 
 console.log(getPeople(rooms));
+
 
 
 /**Нужно написать функцию, которая такой объект преобразует в массив имен жителей
