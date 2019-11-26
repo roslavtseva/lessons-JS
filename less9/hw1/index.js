@@ -11,20 +11,19 @@ const customers = {
     
 };
 
-const getCustomersList = customersObj => {
-    const customersArr = Object.entries(customersObj); //переводим в масив масивів
+const getCustomersList = customersObj => 
+   Object.entries(customersObj)  //переводим в масив масивів
+   
+    .map(elem => ({id: elem[0], ...customersObj[elem[0]]}))
+        
 
-    const customersNames = customersArr 
-        .map[customer => customer[0]];
+    .sort((elem1, elem2) => elem1.age > elem2.age ? 1 : -1);
+    
 
-    /*const sortByAge = customersNames
-    .sort(customer1, customer2) => customer.age - customer.age;
 
-    return sortByAge;*/
+console.log(getCustomersList(customers));
 
-};
 
-console.log()
 
 
 
