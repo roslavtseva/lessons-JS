@@ -1,12 +1,12 @@
 
 
 const superRound = (num, digitsCount) => {
-    const digits = Math.pow(10, digitsCnt);
+    const digit = Math.pow(10, digitsCnt);
     return [
-        Math.floor(num * digit) / digits,
-        Math.round(num * digit) / digits,
-        Math.ceil(num * digit) / digits,
-        Math.trunc(num * digit) / digits,
+        Math.floor(num * digit) / digit,
+        Math.round(num * digit) / digit,
+        Math.ceil(num * digit) / digit,
+        Math.trunc(num * digit) / digit,
         +num.toFixed(digitsCount),
     ];
 }
