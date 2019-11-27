@@ -1,10 +1,20 @@
 
+
+
 const getMaxAbsoluteNumber = arr => {
+    if (!Array.isArray(arr) || arr.length === 0) return null;
+    const newArr = arr.map(el => Math.abs(el));
+    return Math.max(...newArr);
+};
+
+
+
+/**const getMaxAbsoluteNumber = arr => {
     let max =-Infinity; //мінус безкінечність менше всього
 
     arr.forEach (num => {  //робим перебор і на кожній ітерації отримуєм число 
         if (Math.abs(num) > max){ //якщо число по модулю > за те що є в змінній max
-            max= Math.abs(num); //присвоюєм значення
+            max= Math.abs(num); //присвоюєм значення    
         }
     });
     return max;
