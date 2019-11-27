@@ -2,6 +2,8 @@
 
 let splitText = (text, len) => { //len - довжина
 
+    if (typeof str !== 'string') return null;
+    
     const strArr = []; //array for result
     let startPosition = 0;
     
