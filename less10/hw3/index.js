@@ -1,16 +1,13 @@
-
-
-const superRound = (num, digitsCount) => {
-    const digit = Math.pow(10, digitsCnt);
+const superRound = (num, digitsCnt) => {
+    const digits = Math.pow(10, digitsCnt);
     return [
-        Math.floor(num * digit) / digit,
-        Math.round(num * digit) / digit,
-        Math.ceil(num * digit) / digit,
-        Math.trunc(num * digit) / digit,
-        +num.toFixed(digitsCount),
+        Math.floor(num * digits) / digits,
+        Math.round(num * digits) / digits,
+        Math.ceil(num * digits) / digits,
+        Math.trunc(num * digits) / digits,
+        +num.toFixed(digitsCnt),
     ];
 }
-
 
 
 
