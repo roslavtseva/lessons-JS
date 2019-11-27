@@ -1,16 +1,18 @@
-const getRandomNumbers = (arrLength, min, max) => { //3 аргумента
-    const isWrongRange = max < min;
-    const noNumbersBetween = (max - min < 1) && Math.ceil(max) === Math.ceil(min);
+const getRandomNumbers = (arrLeng, from, to) => {
 
-    if (isWrongRange || noNumbersBetween) return null;
+    const isWrongRange = to < from;
+    const noNumbersBetween = (to - from < 1) && Math.ceil(to) === Math.ceil(from);
 
-    return Array(arrLength)
-        .fill()
-        .map(x> Math.trunc((Math.random() * (to - min) + min)));
 
-};
+    if (isWrongRange || noNumbersBetween) {
+        return null;
+    }
+    let arr = [];
+    arr.length = arrLeng;
 
- //console.log(getRandomNumbers(43, -2.522, 1.089));
+    return arr.fill().map(x => Math.trunc(Math.random() * (to - from) + from));
+}
+console.log(getRandomNumbers(43, -2.522, 1.089));
 
 
 /**Создайте функцию, которая будет возвращать массив целых случайных чисел из заданного промежутка
