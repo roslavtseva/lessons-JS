@@ -12,7 +12,7 @@ const getRandomNumbers = (arrLeng, from, to) => {
 
     return arr.fill().map(x => Math.trunc(Math.random() * (to - from) + from));
 }
-console.log(getRandomNumbers(43, -2.522, 1.089));
+//console.log(getRandomNumbers(43, -2.522, 1.089));
 
 
 /**Создайте функцию, которая будет возвращать массив целых случайных чисел из заданного промежутка
