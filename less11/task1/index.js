@@ -1,17 +1,23 @@
 //"abcdefgjklmnop"
 
-let splitText = (text, len) => { //len - довжина
-
-    if (typeof str !== 'string') return null;
+let splitText = (text, len ) => { //len - довжина
     
     const strArr = []; //array for result
     let startPosition = 0;
+
+    if (len === undefined) {
+        len = 10;
+    }
+
+    if (typeof text !== 'string') return null;
     
     while(true) { //безкінечний цикл
         let chunk = text.substr(startPosition, len); //починаючи з 0 відрізати кусок len
         if (chunk.length === 0 ) { //умова виходу з циклу
             break;
         }
+
+        
         startPosition += len;
         strArr.push(chunk[0].toUpperCase() + chunk.slice(1)); //на кожному кроці в масив додавати чанк з першою заглавною і остальним всім текстом 
            
