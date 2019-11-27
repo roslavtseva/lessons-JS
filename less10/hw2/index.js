@@ -6,7 +6,7 @@ const getRandomNumbers = (arrLength, min, max) => { //3 аргумента
 
     return Array(arrLength)
         .fill()
-        .map(el => Math.trunc((Math.random() * (to - min) + min)));
+        .map(x> Math.trunc((Math.random() * (to - min) + min)));
 
 };
 
