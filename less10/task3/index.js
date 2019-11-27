@@ -5,7 +5,7 @@ const multiRound = num => [
     Math.trunc(num * 100) / 100,
     num.toFixed(2),
 ];
-console.log(multiRound(Math.PI));
+//console.log(multiRound(Math.PI));
 
 
 /**Напишите ф-цию, которая разными методами будет округлять число до 2-х знаков после запятой
