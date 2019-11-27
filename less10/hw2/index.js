@@ -10,7 +10,7 @@ const getRandomNumbers = (arrLength, min, max) => { //3 аргумента
 
 };
 
- console.log(getRandomNumbers(43, -2.522, 1.089));
+ //console.log(getRandomNumbers(43, -2.522, 1.089));
 
 
 /**Создайте функцию, которая будет возвращать массив целых случайных чисел из заданного промежутка
