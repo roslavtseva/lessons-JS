@@ -2,7 +2,7 @@ const splitString = (text, len = 10) => {
     const strArr = []; //arr for result
     let startPosition = 0;
 
-    //if (len === undefined){ //якщо не заданий параметр то він має бути 10
+    //if (len === undefined){ //якщо не заданий параметр то він має бути 10  //це закиклило код 
     //    len == 10;
     //};
 
