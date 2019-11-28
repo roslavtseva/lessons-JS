@@ -17,7 +17,7 @@ const sortContacts =(arrObj, direction = true) => {
     });
     
 };
-console.log(sortContacts(arrObj, direction = true));
+//console.log(sortContacts(arrObj, direction = true));
 
 
 /**Напишите ф-цию, которая будет сортировать список контактов в заданном направлении
