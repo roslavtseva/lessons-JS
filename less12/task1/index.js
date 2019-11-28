@@ -1,23 +1,24 @@
 const calc = expression => {
-    const a = expression.split(' ');     //розділ строку на символи(пробілом)
+    const [a, operator, b] = expression.split(' ');     //розділ строку на символи(пробілом)
 
     let result;
-    switch (a[1]) {      //провіряю який в змінній а оператор (індекс елем 1)
+
+    switch (operator) {    
         case '+':      //в випадку якщо це +
             //return a[0] + a[2]; елемент з індексом 0 + ел з інд 2 призводить до конкатинаціі (видає 12)
-            result = Number(a[0] + +a[2]); //тому переводим з строк в цифри
+            result = +a + +b; //тому переводим з строк в цифри
             break;
         case '-':
-            result = a[0] - a[2]; 
+            result = a - b; 
             break;
         case '*':
-            result = a[0] * a[2];
+            result = a * b;
             break;
         case '/':
-            result = a[0] / a[2];
+            result = a / b;
             break;
     }
-    return expression + " = " + result;
+    return `${expression} = ${result}`
 };
 console.log(calc('5 * 2'));
 
