@@ -1,10 +1,10 @@
-let splitString = (text, len) => {
+const splitString = (text, len = 10) => {
     const strArr = []; //arr for result
     let startPosition = 0;
 
-    if (len === undefined){ //якщо не заданий параметр то він має бути 10
-        len == 10;
-    };
+    //if (len === undefined){ //якщо не заданий параметр то він має бути 10
+    //    len == 10;
+    //};
 
     if (typeof text !== 'string') return null;
 
@@ -21,7 +21,10 @@ let splitString = (text, len) => {
     }
     return strArr;
 }
-//console.log(splitString('abcd efgh', 4));
+console.log(splitString('abcd efgh', 4));
+
+
+
 
 
 
