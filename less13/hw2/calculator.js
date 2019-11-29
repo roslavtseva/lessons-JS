@@ -12,7 +12,7 @@ export const calc = expression => {
 
     switch (operator) {    
         case '+':      
-            result = +a + +b; 
+            result = a + b; 
             break;
         case '-':
             result = a - b; 
