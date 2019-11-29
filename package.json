@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/roslavtseva/lessons-JS/issues"
   },
-  "homepage": "https://github.com/roslavtseva/lessons-JS#readme"
+  "homepage": "https://github.com/roslavtseva/lessons-JS#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4"
+  }
 }
