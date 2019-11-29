@@ -2,10 +2,12 @@ export const calc = expression => {
 
     if (typeof expression !== 'string') return null;
 
-    const [a = +a, operator, b = +b] = expression.split(' ');     
+    const [a, operator, b] = expression.split(' ');     
 
     let result;
 
+    a = +a;
+    b = +b;
    
 
     switch (operator) {    
