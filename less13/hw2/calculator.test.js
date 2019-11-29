@@ -1,4 +1,4 @@
-import {calc} from './calculator';
+import {calc} from './calculator.js';
 
 it ('should work correctly with operator "+"', () => {
         const result = calc('10 + 5');
