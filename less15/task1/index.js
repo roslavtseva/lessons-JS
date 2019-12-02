@@ -1,9 +1,9 @@
-const makeCounter = () => {
+export function makeCounter() {
     let count = 0;
-return function(){
-    return count++;
+    return function() {
+        return count++;
+    }
 }
-};
 
 
 
