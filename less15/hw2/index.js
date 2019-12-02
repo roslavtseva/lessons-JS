@@ -28,11 +28,10 @@ function createLogger() {
         },
 
         getRecords: function (type) {
-            if (!str) {
-                return loggerMemo;
-            };
-            return loggerMemo.filter(el => el.type === type).sort((x, y) => x.dateTime.getTime() - y.dateTime.getTime());
-        }
+            let arrWithResult = type !== undefined ? loggerMemo.filter(i => i.type === type) : loggerMemo;
+            return arrWithResult.sort((x, y) => x.dateTime.getTime() - y.dateTime.getTime());
+        },
+
     };
 };
 
