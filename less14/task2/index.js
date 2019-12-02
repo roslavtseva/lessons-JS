@@ -22,7 +22,7 @@ function createMessenger() {
         setMessage,
         setSender,
     }
-}
+};
 
 export default createMessenger;
 //export default createMessenger();
