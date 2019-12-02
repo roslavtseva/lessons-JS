@@ -7,7 +7,7 @@ const obj = {
 
 const arr = ['a', 'c'];
 
-const pickProps = (obj, arr) => {
+export const pickProps = (obj, arr) => {
     return arr.reduce((acc, el) => { //в акум вкладаю всі елементи масиву
         for (let key in obj) { //перебираю ключі
             if (key === el) {  

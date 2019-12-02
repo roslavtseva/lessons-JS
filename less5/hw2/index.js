@@ -9,7 +9,7 @@ export function getPrimes(n) {
   }
 }
 
-export function isPrime(n) {
+function isPrime(n) {
   for (let h = 2; h < n; h++) {
       if (n % h === 0) return false;
   }

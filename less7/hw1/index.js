@@ -1,6 +1,6 @@
 let arr = [2, 4, 6];
 
-const squareArray = arr => {
+export const squareArray = arr => {
 
     if(!Array.isArray(arr)){
         return null;
