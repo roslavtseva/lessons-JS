@@ -12,7 +12,7 @@ function reset(){
     calc = 0;
 };
 
-function reset(){
+function getMemo(){
     return calc;
 };
 
