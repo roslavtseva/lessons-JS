@@ -8,6 +8,7 @@ export function getSum (firstNum, secondNum){
     return(result);
 }
 
+
 /**Создайте ф-цию, которая ищет сумму всех четных чисел в заданном промежутке
 
 Основные требования:

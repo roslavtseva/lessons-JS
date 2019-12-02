@@ -6,6 +6,11 @@ it('should get all prime numbers', () => {
 });
 
 it ('should get null', () => {
-        const result = getPrimes(12,3);
+        const result = getPrimes(-1);
         expect(result).toEqual(null);
+});
+
+it ('should get undefined', () => {
+    const result = getPrimes(0);
+    expect(result).toEqual(undefined);
 });

@@ -8,5 +8,5 @@ export function findDivCount(a, b, n) {
         result++;
     }
     return result;
-}
+};
 //findDivCount(10, 20, 2);
