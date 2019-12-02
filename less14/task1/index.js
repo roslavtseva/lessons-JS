@@ -1,24 +1,31 @@
 //'use strict'; //строге виконання скрипта
 
-let message = "Just learn it!";
+'use strict';
 
+let message = 'Just learn it!';
 
 export function sendMessage(name) {
-    const sender = 'Gromcode';
-
-    console.log( `${name}, ${message} Your ${sender}`);
+    let sender = 'Gromcode';
+    console.log(`${name}, ${message} Your ${sender}`);
 }
 
-function setMessage(text){
+export function setMessage(text) {
     message = text;
 }
+
+
+
+
+/*
+
+
 
 sendMessage('Ann');
 setMessage('Hello');
 sendMessage('Ann');
 message = 'Hi!';
 sendMessage('Ann');
-
+*/
 
 
 
