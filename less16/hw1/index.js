@@ -14,7 +14,7 @@ function createArrayOfFunctions(number) {
 
 //console.log(createArrayOfFunctions(9)[2]);
 
-//export { createArrayOfFunctions };
+export { createArrayOfFunctions };
 /**Создайте фабрику массивов ф-ций :)
 
 Основные требования:
