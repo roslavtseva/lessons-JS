@@ -12,7 +12,7 @@ function bar() {
 var foo = bar();
 console.log(foo);
 
-
+export default foo;
 
 
 /*
