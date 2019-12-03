@@ -8,21 +8,21 @@ function createLogger() {
         warn: function (text) {
             loggerMemo.push({
                 message: text,
-                dateTime: new Date,
+                dateTime: new Date(),
                 type: 'warn',
             });
         },
         error: function (text) {
             loggerMemo.push({
                 message: text,
-                dateTime: new Date,
+                dateTime: new Date(),
                 type: 'error',
             })
         },
         log: function (text) {
             loggerMemo.push({
                 message: text,
-                dateTime: new Date,
+                dateTime: new Date(),
                 type: 'log',
             })
         },
