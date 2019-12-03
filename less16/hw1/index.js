@@ -1,8 +1,8 @@
 
 function createArrayOfFunctions(number) {
 
-    if (typeof number !== 'number') return null;
     if (number === undefined) return [];
+    if (typeof number !== 'number') return null;
     let arr = [];
     for (let i = 0; i < number; i++) {
         arr[i] = function () {
@@ -12,7 +12,7 @@ function createArrayOfFunctions(number) {
     return arr;
 };
 
-//console.log(createArrayOfFunctions(9)[2]);
+//console.log(createArrayOfFunctions('mmm'));
 
 export { createArrayOfFunctions };
 /**Создайте фабрику массивов ф-ций :)
