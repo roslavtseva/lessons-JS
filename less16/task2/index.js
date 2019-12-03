@@ -1,10 +1,12 @@
 //Исправьте код так, чтобы в созданном массиве каждый элемент при вызове возвращал свой индекс
 
-let arr = [];
+const arr = [];
 
-for (let i = 0; i < 10; i++) {
+for(let i = 0; i < 10; i++) {
     arr[i] = function() {
         return i;
     }
 }
+
+export { arr };
 //console.log(arr[7]());

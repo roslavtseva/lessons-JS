@@ -9,10 +9,10 @@ function createArrayOfFunctions(number) {
             return i;
         }
     }
-    return Array;
+    return arr;
 };
 
-console.log(createArrayOfFunctions());
+//console.log(createArrayOfFunctions(9)[2]);
 
 //export { createArrayOfFunctions };
 /**Создайте фабрику массивов ф-ций :)
