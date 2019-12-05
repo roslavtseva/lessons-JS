@@ -1,4 +1,4 @@
-const callbackPrompt = {
+export const callbackPrompt = {
     message: 'Tell me your number',
     showPrompt() {
        const phoneNumber =  prompt(this.message);// вспливаюче вікно з запросом 
@@ -8,7 +8,7 @@ const callbackPrompt = {
         setTimeout(this.showPrompt.bind(this), ms);
     }
 };
-callbackPrompt.showPrompt();
+callbackPrompt.showDeferredPrompt(1000);
 
 
 /**Создайте объект, который будет запрашивать у пользователя номер телефона для обратного звонка
