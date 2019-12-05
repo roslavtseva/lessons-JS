@@ -7,7 +7,7 @@ const timer = {
             this.secondsPassed += 5; //зі збільшенням значення
             if (this.secondsPassed === 60) {
                 this.minsPassed++;
-                this.minsPassed = 0;
+                this.secondsPassed = 0;
             }
         }, 5000);
 
