@@ -1,4 +1,24 @@
 
+  
+function spy(func) {
+    wrapper.calls = [];
+    function wrapper(...args) {
+        wrapper.calls.push(args);
+        return func.apply(this, args);
+    }
+
+    return wrapper;
+}
+
+export { spy };
+
+
+
+
+
+
+
+/**
 function test(a, b) {
     return Math.sqrt(a * a + b * b);
 };
@@ -25,9 +45,7 @@ console.log(spyTest.calls);
 export {spy};
 
 
-
-
-
+ */
 
 
 
