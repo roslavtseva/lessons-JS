@@ -24,8 +24,8 @@ const event = {
         return this.guests
             .filter(({ age }) => age >= 18) //відфільтровую вік
             .map(({ email, name }) => ({    //через меп пробігаюсь по елементах і ств новий об'єкт текст
-                email,
-                text: `Hi ${name}. ${this.message}`,
+                email: `${email}`,
+                message: `Dear ${name}! ${this.message}`,
             }))
     }
 };
