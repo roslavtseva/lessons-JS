@@ -30,8 +30,8 @@ const event = {
     }
 };
 
-console.log(event.getInvitations());
-//export {event};
+//console.log(event.getInvitations());
+export {event};
 
 
 /**Отобразите предстоящий праздник в виде объекта, который может разослать приглашения всем гостям
