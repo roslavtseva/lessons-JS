@@ -23,15 +23,15 @@ const event = {
     getInvitations() {
         return this.guests
             .filter(({ age }) => age >= 18) //відфільтровую вік
-            .map(({ name, email }) => ({    //через меп пробігаюсь по елементах і ств новий об'єкт текст
+            .map(({ email, name }) => ({    //через меп пробігаюсь по елементах і ств новий об'єкт текст
+                email,
                 text: `Hi ${name}. ${this.message}`,
-                email
             }))
     }
 };
 
-//console.log(event.getInvitations());
-export {event};
+console.log(event.getInvitations());
+//export {event};
 
 
 /**Отобразите предстоящий праздник в виде объекта, который может разослать приглашения всем гостям
