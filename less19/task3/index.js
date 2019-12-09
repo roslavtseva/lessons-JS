@@ -14,6 +14,8 @@ const user = {
 user.fullName = 'John Doe';
 console.log(user.firstName);
 
+export default user;
+
 
 
 
