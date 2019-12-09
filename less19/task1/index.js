@@ -1,6 +1,6 @@
 const vehicle = {
     move() {
-        console.log(`${this.name} moving`);
+        console.log(`${this.name} is moving`);
     },
     stop() {
         console.log(`${this.name} stopped`);
