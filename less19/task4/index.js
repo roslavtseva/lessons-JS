@@ -4,7 +4,7 @@ function User(name, age) {
 
 }
     User.prototype.sayHi = function() {
-        console.log(`Hi, i am ${this.name}`);
+        console.log(`Hi, I am ${this.name}`);
 };
     User.prototype.requestNewPhoto = function() {
         console.log(`New photo request was sent for ${this.name}`);
@@ -22,7 +22,7 @@ User.prototype.setAge = function (age) {
 //user1.sayHi();
 //user1.requestNewPhoto();
 //User.setAge();
-export { User };
+//export { User };
 
 /**Напишите конструктор, который будет создавать пользователей с определенными возможностями
 
