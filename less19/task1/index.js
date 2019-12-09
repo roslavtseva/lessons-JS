@@ -13,20 +13,21 @@ const vehicle = {
 const ship = {
     name: 'Victoria',
     hasWheels: false,
-    stopMachine() {
-        console.log(`${this.name} lifting anchor down`);
-        ship.stop();
-    },
     startMachine() {
         console.log(`${this.name} lifting anchor up`);
         ship.move();
     },
+    stopMachine() {
+        console.log(`${this.name} lifting anchor down`);
+        ship.stop();
+    },
     __proto__: vehicle,
 };
 Object.setPrototypeOf(ship, vehicle);
+ship.startMachine();
 ship.stopMachine();
 
-export{ ship, vehicle};
+//export{ ship, vehicle};
 
 
 
