@@ -22,7 +22,7 @@ User.prototype.setAge = function (age) {
 //user1.sayHi();
 //user1.requestNewPhoto();
 //User.setAge();
-//export { User };
+export { User };
 
 /**Напишите конструктор, который будет создавать пользователей с определенными возможностями
 
