@@ -1,24 +1,24 @@
+  
 class Wallet {
-    constructor(){
-        this.balance = 0;
-    }
+    _balance = 0;
 
     getBalance() {
-        return this.balance;
+        return this._balance;
     }
 
-    deposit(amount) {
-        this.balance += amount;
-
+    deposit(value) {
+        this._balance += value;
     }
-    withdraw(amount) {
-        if( amount > this.balance) {
+
+    withdraw(value) {
+        if(value > this._balance) {
             console.log('No enough funds');
             return;
         }
-        this.balance -+ amount;
+        this._balance -= value;
     }
-}
+};
+
 export { Wallet };
 
 
