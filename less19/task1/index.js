@@ -24,6 +24,7 @@ const ship = {
 Object.setPrototypeOf(ship, vehicle);
 ship.stop();
 
+//export{ ship, vehicle};
 
 
 
