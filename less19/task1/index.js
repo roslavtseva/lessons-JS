@@ -15,14 +15,16 @@ const ship = {
     hasWheels: false,
     stopMachine() {
         console.log(`${this.name} lifting anchor down`);
+        ship.stop();
     },
     startMachine() {
         console.log(`${this.name} lifting anchor up`);
+        ship.move();
     },
     __proto__: vehicle,
 };
 Object.setPrototypeOf(ship, vehicle);
-ship.stop();
+ship.stopMachine();
 
 export{ ship, vehicle};
 
