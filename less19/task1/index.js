@@ -27,7 +27,7 @@ Object.setPrototypeOf(ship, vehicle);
 ship.startMachine();
 ship.stopMachine();
 
-//export{ ship, vehicle};
+export{ ship, vehicle};
 
 
 
