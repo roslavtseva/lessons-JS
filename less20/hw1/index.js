@@ -9,11 +9,11 @@ class Order {
         this.type = type;
     }
     checkPrice(){
-        return this.price > 1000 ? false : true;
+        return this.price < 1000 ? false : true;
     }
     confirmOrder(){
-        this.isConfirmed = true;
         this.dateComfirmed = new Date();
+        this.isConfirmed = true;
 
     }
     isValidType(){
