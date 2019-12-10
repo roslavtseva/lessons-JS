@@ -11,10 +11,9 @@ class Order {
     checkPrice(){
         return this.price < 1000 ? false : true;
     }
-    confirmOrder(){
-        this.dateComfirmed = new Date();
+    confirmOrder() {
         this.isConfirmed = true;
-
+        this.dateConfirmed = new Date();
     }
     isValidType(){
         if(this.type === 'Buy' || this.type === 'Sell') return true;
@@ -23,7 +22,7 @@ class Order {
 
 }
 
-//console.log(new Order(1200, 'lviv', 'Buy'));
+//console.log(new Order(900, 'lviv', 'Buy'));
 export {Order};
 
 
