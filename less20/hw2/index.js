@@ -19,7 +19,7 @@ class UserRepository {
     }
     getUserNameById(){
         let userName = this._users.find(x => x._id === id);
-        return obj === undefined ? [] : obj._name;
+        return userName === undefined ? [] : obj._name;
     }
 };
 
