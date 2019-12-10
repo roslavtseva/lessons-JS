@@ -23,6 +23,15 @@ class UserRepository {
     }
 };
 
+const users = [
+    new User(1, 'tanya', 1111),
+    new User(2, 'kolya', 2222),
+    new User(3, 'vanya', 3333),
+];
+
+const Users = new UserRepository(users);
+//console.log(Users.getUserNames());
+export {User, UserRepository};
 
 
 
