@@ -17,9 +17,9 @@ class UserRepository {
     getUserIds(){
         return this._users.map(({_id}) => _id);
     }
-    getUserNameById(){
+    getUserNameById(id){
         let userName = this._users.find(x => x._id === id);
-        return userName === undefined ? [] : obj._name;
+        return userName === undefined ? [] : userName._name;
     }
 };
 
@@ -30,7 +30,7 @@ const users = [
 ];
 
 const Users = new UserRepository(users);
-//console.log(Users.getUserNames());
+//console.log(Users.getUserNameById(2));
 export {User, UserRepository};
 
 
