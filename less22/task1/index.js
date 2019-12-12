@@ -24,14 +24,14 @@ const logGreenSpan = logTarget.bind(null, 'SPAN', 'green');
 const logGreySpan = logTarget.bind(null, 'SPAN', 'grey');
 
 const add = () => {
-divElem.addEventListener('click', logGreenDiv, true); //викликаємо змінну елем яка після кліку в змінну логТаргет додає зелений дів
-divElem.addEventListener('click', logGreyDiv); //викликаємо змінну елем яка після кліку в змінну логТаргет додає зелений дів
+    divElem.addEventListener('click', logGreyDiv, true); //викликаємо змінну елем яка після кліку в змінну логТаргет додає зелений дів
+divElem.addEventListener('click', logGreenDiv); //викликаємо змінну елем яка після кліку в змінну логТаргет додає зелений дів
 
-pElem.addEventListener('click', logGreenP, true); //{capture: true} / захват
-pElem.addEventListener('click', logGreyP);
+pElem.addEventListener('click', logGreyP, true);
+pElem.addEventListener('click', logGreenP); //{capture: true} / захват
 
-pElem.addEventListener('click', logGreenSpan, true);
-pElem.addEventListener('click', logGreySpan);
+pElem.addEventListener('click', logGreySpan, true);
+pElem.addEventListener('click', logGreenSpan);
 };
 add();
 
