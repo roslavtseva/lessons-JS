@@ -10,16 +10,20 @@ const renderListItems = listItems => {
 
     const listElem = document.querySelector('.list');
     const createBtn = document.querySelector('.create-task-btn');
+    const taskInput = document.querySelector('.task-input');
 
     const listItemElems = listItems
-        .sort((a, b) => a.done - b.done)
+        .sort((a, b) => !b.done - !a.done)
         .map(({ text, done }) => {
 
             const listItemElem = document.createElement('li');
-            listItemElem.classList.add('list__item');
+
             if (done) {
-                listItemElem.classList.add('list__item-done');  //add styles
-            }
+                listItemElem.classList.add('list__item-done', 'list__item');  //add styles
+            }else {
+                listItemElem.classList.add('list__item');
+
+            };
 
             const checkboxElem = document.createElement('input');
             checkboxElem.setAttribute('type', 'checkbox');
@@ -34,19 +38,35 @@ const renderListItems = listItems => {
         });
 
         const addListItem = createBtn.addEventListener('click', function(text, done) {
+            text = taskInput.value;
+            const sortNewLi = () => {
+                listItemElems.sort((a, b) => !b.done - !a.done);
+            };
 
             const newLi = document.createElement('li');
-            newLi.appendChild(document.createTextNode(`${text}`));
+            newLi.appendChild(document.createTextNode(text));
             listElem.appendChild(newLi);
             newLi.classList.add('list__item');
-
+            
             const checkForNew = document.createElement('input');
             checkForNew.setAttribute('type', 'checkbox');
             checkForNew.checked = done;
             checkForNew.classList.add('list__item-checkbox');        
             newLi.prepend(checkForNew);
+            sortNewLi();
+            
+            const markDone = checkForNew.addEventListener('change', function(){
+                if(checkForNew.checked){
+                    newLi.classList.add('list__item-done');
 
+                }else {
+                    newLi.classList.remove('list__item-done');
+                }
+                
+            })
+            
         })
+
 
     listElem.append(...listItemElems);
         }
