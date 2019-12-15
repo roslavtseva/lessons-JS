@@ -1,74 +1,78 @@
 const tasks = [
-    { text: 'Buy milk', done: false },
-    { text: 'Pick up Tom from Airport', done: false },
-    { text: 'Visit party', done: false },
-    { text: 'Visit doctor', done: true },
-    { text: 'Buy meat', done: true },
+    { text: 'Buy milk', done: false, date: new Date(), },
+    { text: 'Pick up Tom from Airport', done: false, date: new Date(), },
+    { text: 'Visit party', done: false, date: new Date(), },
+    { text: 'Visit doctor', done: true, date: new Date(), },
+    { text: 'Buy meat', done: true, date: new Date(), },
 ];
 
-const renderListItems = listItems => {
+const toDoList = document.querySelector('.list');
 
-    const listElem = document.querySelector('.list');
-    const createBtn = document.querySelector('.create-task-btn');
+const createBtn = document.querySelector('.create-task-btn');
+
+const createListRander = listItems => {
+
+    toDoList.innerHTML = '';
+
+    const itemsOfList = listItems
+    .sort ((a,b) => b.date - a.date)
+    .sort ((a,b) => !b.done - !a.done)
+    .map (({text, done}) => {
+
+        const liElem = document.createElement('li');
+        liElem.classList.add('li__elem');
+
+
+        const checkBox = document.createElement('input');
+        checkBox.setAttribute('type', 'checkbox');
+        checkBox.classList.add('li__elem-checkbox');
+        checkBox.checked = done;
+        if (done) liElem.classList.add('li__elem-done');
+
+        liElem.append(checkBox, text);
+        return liElem;
+    });
+
+    toDoList.append(...itemsOfList);
+
+};
+
+const randerList = renderedTasks => {
+    toDoList.innerHTML = '';
+    toDoList.append(...renderedTasks);
+}
+
+const switchBox = event => {
+  const elemText = event.target.parentElement.textContent;
+    tasks.map((elem) => {
+    if (elem.text === elemText){
+        elem.done = !elem.done;
+    }
+    });
+
+    // const currentTask = tasks.find(elem => elem.id === +event.target.parentElement.id);
+    // currentTask.done = event.target.checked;
+
+    createListRander(tasks);
+}
+
+toDoList.addEventListener('click', switchBox);
+
+const addListItem = createBtn.addEventListener('click', function(){
     const taskInput = document.querySelector('.task-input');
+    let newElem = {
+        text: taskInput.value,
+        done: false,
+        date: new Date(),
+    };
+    
+    taskInput.value = '';
 
-    const listItemElems = listItems
-        .sort((a, b) => !b.done - !a.done)
-        .map(({ text, done }) => {
+    tasks.push(newElem);
+    
+    createListRander(tasks);
 
-            const listItemElem = document.createElement('li');
-
-            if (done) {
-                listItemElem.classList.add('list__item-done', 'list__item');  //add styles
-            }else {
-                listItemElem.classList.add('list__item');
-
-            };
-
-            const checkboxElem = document.createElement('input');
-            checkboxElem.setAttribute('type', 'checkbox');
-            checkboxElem.checked = done;
-            checkboxElem.classList.add('list__item-checkbox');        
-            listItemElem.append(checkboxElem, text);
-
-           
-            
-
-            return listItemElem;
-        });
-
-        const addListItem = createBtn.addEventListener('click', function(text, done) {
-            text = taskInput.value;
-            const sortNewLi = () => {
-                listItemElems.sort((a, b) => !b.done - !a.done);
-            };
-
-            const newLi = document.createElement('li');
-            newLi.appendChild(document.createTextNode(text));
-            listElem.appendChild(newLi);
-            newLi.classList.add('list__item');
-            
-            const checkForNew = document.createElement('input');
-            checkForNew.setAttribute('type', 'checkbox');
-            checkForNew.checked = done;
-            checkForNew.classList.add('list__item-checkbox');        
-            newLi.prepend(checkForNew);
-            sortNewLi();
-            
-            const markDone = checkForNew.addEventListener('change', function(){
-                if(checkForNew.checked){
-                    newLi.classList.add('list__item-done');
-
-                }else {
-                    newLi.classList.remove('list__item-done');
-                }
-                
-            })
-            
-        })
+})
 
 
-    listElem.append(...listItemElems);
-        }
-
-renderListItems(tasks);
+createListRander(tasks);
