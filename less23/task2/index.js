@@ -34,7 +34,7 @@ const arenaElem = document.querySelector('.arena');
 const renderArena = () => {
 
     const lineString = getSectorLines();
-    const sectorsString = generateNumbersRange(1, 2)
+    const sectorsString = generateNumbersRange(1, 3)
         .map(sectorNumber => `
             <div 
             class='sector' 
@@ -62,4 +62,4 @@ const onSeatSelect = event => {
 
 
 arenaElem.addEventListener('click', onSeatSelect)
-renderArena()
+renderArena();
