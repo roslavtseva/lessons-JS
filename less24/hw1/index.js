@@ -3,9 +3,9 @@ function getDiff (startDate, endDate) {
 
     const msInMin = 1000 * 60;
     const msInHour = 1000 * 60 * 60;
-    const msInDay = 1000 * 60 * 60 * 60;
+    const msInDay = 1000 * 60 * 60 * 24;
 
-    const diffOfTime = (endDate - startDate);
+    const diffOfTime = Math.abs(endDate - startDate);
 
     
 
@@ -22,8 +22,8 @@ function getDiff (startDate, endDate) {
 
     const difference = Math.abs(endDate - startDate);
     const daysLeft = Math.floor(difference / days);
-    return `${Math.abs(days)}d ${Math.abs(hours)}h ${Math.abs(minutes)}m ${Math.abs(seconds)}s`
-   // return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
 };
 const startDate = new Date(Date.UTC(2019, 10, 24, 20, 50, 34, 44));
