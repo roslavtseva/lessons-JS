@@ -22,7 +22,7 @@ function getDiff (startDate, endDate) {
     return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
 };
-console.log(getDiff(new Date(), new Date(1995, 11, 17, 3, 24, 0)));
+//console.log(getDiff(new Date(2011, 10, 10, 3, 24, 0), new Date(1995, 11, 17, 3, 24, 0)));
 
 export {getDiff};
 
