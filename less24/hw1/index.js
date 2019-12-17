@@ -1,8 +1,3 @@
-const formatter = new Intl.DateTimeFormat( 'en', {
-    timeZone: 'UTC',
-});
-
-
 
 function getDiff (startDate, endDate) {
 
@@ -25,7 +20,7 @@ function getDiff (startDate, endDate) {
 
     const seconds = Math.trunc ((hoursInMs - (minutes * (msInMin))) / 1000);
 
-    formatter.format(startDate, endDate);
+
 
     return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
