@@ -24,6 +24,7 @@ function getDiff (startDate, endDate) {
 };
 console.log(getDiff(new Date(), new Date(1995, 11, 17, 3, 24, 0)));
 
+export {getDiff};
 
 
 
