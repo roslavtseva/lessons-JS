@@ -39,8 +39,8 @@ const formElem = document.querySelector('.login-form');
 const onFormSubmit = event => {
     event.preventDefault();
     let objForData = {};
-    const formData = [...new FormData(loginForm)];
-    formData.map(el => objForData[el[0]] = el[1] );
+    [...new FormData(formElem)]
+    .map(el => objForData[el[0]] = el[1] );
     alert(JSON.stringify(objForData));
 };
 
