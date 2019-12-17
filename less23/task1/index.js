@@ -38,10 +38,10 @@ const formElem = document.querySelector('.login-form');
 
 const onFormSubmit = event => {
     event.preventDefault();
-    const formData = [...new FormData(formElem)]
-    .reduce((acc, [field, value]) => ({ ...acc, [field]: value}), {});
-
-    alert(JSON.stringify(formData));
+    let objForData = {};
+    const formData = [...new FormData(loginForm)];
+    formData.map(el => objForData[el[0]] = el[1] );
+    alert(JSON.stringify(objForData));
 };
 
 formElem.addEventListener('submit', onFormSubmit);
