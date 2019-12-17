@@ -20,9 +20,10 @@ function getDiff (startDate, endDate) {
 
     const seconds = Math.trunc ((hoursInMs - (minutes * (msInMin))) / 1000);
 
-
-
-    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    const difference = Math.abs(endDate - startDate);
+    const daysLeft = Math.floor(difference / days);
+    return `${Math.abs(days)}d ${Math.abs(hours)}h ${Math.abs(minutes)}m ${Math.abs(seconds)}s`
+   // return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
 };
 const startDate = new Date(Date.UTC(2019, 10, 24, 20, 50, 34, 44));
@@ -33,6 +34,9 @@ console.log(getDiff (startDate, endDate));
 
  export {getDiff};
 
+
+ //    const difference = Math.abs(finishDate - startDate);
+//  const daysLeft = Math.floor(difference / DAY);
 
 
 
