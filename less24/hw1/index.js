@@ -8,23 +8,23 @@ function getDiff (startDate, endDate) {
 
     
 
-    const days = Math.trunc( diffOfTime / msInDay);
-    const daysInMs = days * msInDay;
+    const days = Math.trunc( diffOfTime / (msInDay));
+    const daysInMs = days * (msInDay);
     const diffOfDays = diffOfTime - daysInMs;
 
-    const hours = Math.trunc( diffOfTime / msInHour);
-    const hoursInMs = diffOfDays - (hours * msInHour);
+    const hours = Math.trunc( diffOfDays / (msInHour));
+    const hoursInMs = diffOfDays - (hours * (msInHour));
 
-    const minutes = Math.trunc( hoursInMs / msInMin);
+    const minutes = Math.trunc( hoursInMs / (msInMin));
 
-    const seconds = Math.trunc ((hoursInMs - (minutes * msInMin)) / 1000);
+    const seconds = Math.trunc ((hoursInMs - (minutes * (msInMin))) / 1000);
 
     return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
 };
 //console.log(getDiff(new Date(2011, 10, 10, 3, 24, 0), new Date(1995, 11, 17, 3, 24, 0)));
 
-export {getDiff};
+ export {getDiff};
 
 
 
