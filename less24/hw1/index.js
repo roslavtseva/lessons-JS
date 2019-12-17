@@ -1,3 +1,9 @@
+const formatter = new Intl.DateTimeFormat( 'en', {
+    timeZone: 'UTC',
+});
+
+
+
 function getDiff (startDate, endDate) {
 
     const msInMin = 1000 * 60;
@@ -19,9 +25,15 @@ function getDiff (startDate, endDate) {
 
     const seconds = Math.trunc ((hoursInMs - (minutes * (msInMin))) / 1000);
 
+    formatter.format(startDate, endDate);
+
     return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
 };
+const startDate = new Date(Date.UTC(2019, 10, 24, 20, 50, 34, 44));
+const endDate = new Date(Date.UTC(2019, 1, 22, 17, 52, 18));
+console.log(getDiff (startDate, endDate));
+
 //console.log(getDiff(new Date(1995, 11, 17, 3, 24, 0), new Date(2011, 10, 10, 5, 16, 12)));
 
  export {getDiff};
