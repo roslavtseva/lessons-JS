@@ -1,18 +1,14 @@
-const tasks = [
-    { text: 'Buy milk', done: false, date: new Date(), },
-    { text: 'Pick up Tom from Airport', done: false, date: new Date(), },
-    { text: 'Visit party', done: false, date: new Date(), },
-    { text: 'Visit doctor', done: true, date: new Date(), },
-    { text: 'Buy meat', done: true, date: new Date(), },
-];
+import { tasks, setItem, getItem, ifStorageChanges} from './storage.js';
 
 const toDoList = document.querySelector('.list');
 
 const createBtn = document.querySelector('.create-task-btn');
 
-const createListRander = listItems => {
+export const createListRander = listItems => {
 
     toDoList.innerHTML = '';
+
+    const tasks = getItem('listItems') || 0; 
 
     const itemsOfList = listItems
     .sort ((a,b) => b.date - a.date)
@@ -35,12 +31,11 @@ const createListRander = listItems => {
 
     toDoList.append(...itemsOfList);
 
+                                            //setItem
+
 };
 
-const randerList = renderedTasks => {
-    toDoList.innerHTML = '';
-    toDoList.append(...renderedTasks);
-}
+
 
 const switchBox = event => {
   const elemText = event.target.parentElement.textContent;
@@ -50,8 +45,6 @@ const switchBox = event => {
     }
     });
 
-    // const currentTask = tasks.find(elem => elem.id === +event.target.parentElement.id);
-    // currentTask.done = event.target.checked;
 
     createListRander(tasks);
 }
@@ -60,15 +53,21 @@ toDoList.addEventListener('click', switchBox);
 
 const addListItem = createBtn.addEventListener('click', function(){
     const taskInput = document.querySelector('.task-input');
-    let newElem = {
-        text: taskInput.value,
-        done: false,
-        date: new Date(),
-    };
-    
+
     taskInput.value = '';
 
-    tasks.push(newElem);
+
+    const tasksList = getItem('tasks') || [];
+    ​
+        const newElem = tasks.concat({
+            text: taskInput.value,
+            done: false,
+            date: new Date().toISOString(),
+
+        });
+    ​
+     const newList = setItem('tasks', newElem);
+
     
     createListRander(tasks);
 
