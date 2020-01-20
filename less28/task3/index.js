@@ -21,6 +21,6 @@ function triple(a) {
     return mult(3)(a);
 };
 
-// export { mult, 
-//         twice, 
-//         triple };
+export { mult, 
+        twice, 
+        triple };
