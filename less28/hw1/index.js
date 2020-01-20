@@ -26,7 +26,7 @@
 
 // console.log(maxFibonacci(15));
 
- const maxFibonacci = (number) => {
+ export const maxFibonacci = (number) => {
     if (number < 1) return 0;
     let prevNum = 1;
     let secondNum = 1;
