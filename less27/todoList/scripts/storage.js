@@ -5,3 +5,12 @@ export const setItem = (key, value) => {
 };
 
 export const getItem = key => JSON.parse(localStorage.getItem(key));
+
+
+// const onStorageChange = e => {
+//     if (e.key === 'tasksList') {
+//             renderTasks();
+//     }
+// };
+
+// window.addEventListener('storage', onStorageChange);
