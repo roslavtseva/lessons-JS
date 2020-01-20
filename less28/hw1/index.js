@@ -27,7 +27,7 @@ function shmoment(date) {
     };
 };
 
-//export { shmoment };
+export { shmoment };
 
  //console.log(new Date(2020, 0, 7, 17, 17, 17))
  //console.log(shmoment(new Date(2020, 0, 7, 17, 17, 17)).add('minutes', 6).add('days', 11).subtract('years', 4).result())
