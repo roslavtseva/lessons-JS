@@ -19,21 +19,21 @@ export const addImage = (imgSrc, callback) => {
 };
 
 //const imgSrc = 'http://tlap.com/wp-content/uploads/2015/02/Foreks-sovetnik-kalmar-skachat-besplatno-i-bez-registratsii.jpg';
-const imgSrc = 'https://server.com/image.png';
+// const imgSrc = 'https://server.com/image.png';
 
-const onImageLoaded = (error, data) => {
+// const onImageLoaded = (error, data) => {
 
-    if (error){
-        console.log('error');
-        return;
-    };
+//     if (error){
+//         console.log('error');
+//         return;
+//     };
 
-    const {width, height} = data;
-    const sizeElem = document.querySelector('.img-size');
-    sizeElem.textContent = `${width} x ${height}`;
-};
+//     const {width, height} = data;
+//     const sizeElem = document.querySelector('.img-size');
+//     sizeElem.textContent = `${width} x ${height}`;
+// };
 
-addImage(imgSrc, onImageLoaded);
+// addImage(imgSrc, onImageLoaded);
 
 
 
