@@ -18,7 +18,8 @@ export const addImage = (imgSrc, callback) => {
 
 };
 
-const imgSrc = 'http://tlap.com/wp-content/uploads/2015/02/Foreks-sovetnik-kalmar-skachat-besplatno-i-bez-registratsii.jpg';
+//const imgSrc = 'http://tlap.com/wp-content/uploads/2015/02/Foreks-sovetnik-kalmar-skachat-besplatno-i-bez-registratsii.jpg';
+const imgSrc = 'https://server.com/image.png';
 
 const onImageLoaded = (error, data) => {
 
