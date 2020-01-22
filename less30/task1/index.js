@@ -2,7 +2,7 @@
 
 
 
-const addImage = imgSrc => {
+export const addImage = imgSrc => {
     return new Promise ((resolveCb, rejectCb) => {
 
         const imgElem = document.createElement('img');
