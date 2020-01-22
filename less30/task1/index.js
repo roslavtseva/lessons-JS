@@ -1,5 +1,5 @@
 
-export {addImage} ;
+// export {addImage} ;
 
 
 const addImage = imgSrc => {
