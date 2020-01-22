@@ -2,7 +2,7 @@
 
 
 
-export const addImage = imgSrc => {
+const addImage = imgSrc => {
     return new Promise ((resolveCb, rejectCb) => {
 
         const imgElem = document.createElement('img');
@@ -19,20 +19,20 @@ export const addImage = imgSrc => {
         }
         
         imgElem.addEventListener('load', onImageLoaded);
-        imgElem.addEventListener('error', () => rejectCb(new Error('Image load failed')));
+        imgElem.addEventListener('error', () => rejectCb('Image load failed'));
     })
 
 }
 
 
 
-// const imgSrc = 'http://tlap.com/wp-content/uploads/2015/02/Foreks-sovetnik-kalmar-skachat-besplatno-i-bez-registratsii.jpg';
+const imgSrc = 'http://tlap.com/wp-content/uploads/2015/02/Foreks-sovetnik-kalmar-skachat-besplatno-i-bez-registratsii.jpg';
 
-// const resultPromise = addImage(imgSrc);
+const resultPromise = addImage(imgSrc);
 
-// resultPromise.catch(error => console.log(error));
+resultPromise.catch(error => console.log(error));
 
-// console.log(resultPromise);
+console.log(resultPromise);
 
 
 
