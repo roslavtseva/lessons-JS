@@ -26,11 +26,11 @@ export const addImage = imgSrc => {
 
 
 
-const imgSrc = 'http://tlap.com/wp-content/uploads/2015/02/Foreks-sovetnik-kalmar-skachat-besplatno-i-bez-registratsii.jpg';
+const imgSrc = 'http://tlap.com/wp-content/uloads/2015/02/Foreks-sovetnik-kalmar-skachat-besplatno-i-bez-registratsii.jpg';
 
 const resultPromise = addImage(imgSrc);
 
-resultPromise.then(data => console.log(data));
+resultPromise.catch(error => console.log(error));
 
 console.log(resultPromise);
 
