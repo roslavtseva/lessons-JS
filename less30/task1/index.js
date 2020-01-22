@@ -1,8 +1,8 @@
 
+// export {addImage} ;
 
 
-
-export const addImage = imgSrc => {
+const addImage = imgSrc => {
     const p = new Promise ((resolveCb, rejectCb) => {
 
         const imgElem = document.createElement('img');
@@ -26,7 +26,7 @@ export const addImage = imgSrc => {
 
 
 
-const imgSrc = 'http://tlap.com/wp-content/uloads/2015/02/Foreks-sovetnik-kalmar-skachat-besplatno-i-bez-registratsii.jpg';
+const imgSrc = 'http://tlap.com/wp-content/uploads/2015/02/Foreks-sovetnik-kalmar-skachat-besplatno-i-bez-registratsii.jpg';
 
 const resultPromise = addImage(imgSrc);
 
