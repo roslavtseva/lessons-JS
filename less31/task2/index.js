@@ -18,7 +18,7 @@ export const asyncCalculator = num => new Promise((resolve) => {
     }))
 
     .then (value => {
-      const result = value * 2;
+      const result = (value * value) * 2;
           console.log(`Doublet value: ${result}`);
           return result;
     });
