@@ -36,10 +36,10 @@ function getStartDate(daysAgo) {
 };
 
 function getAllDevelopers(commits, days) {
-    const fromDate = getStartDate(days);
+    const dateFrom = getStartDate(days);
 
     const usersData = commits
-        .filter(commit => new Date(commit.commit.author.date) - fromDate > 0)
+        .filter(commit => new Date(commit.commit.author.date) - dateFrom > 0)
         .reduce((acc, commit) => {
             const id = commit.author.id;
             acc[id] = acc[id] ? acc[id] : {};
