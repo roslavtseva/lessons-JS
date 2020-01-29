@@ -25,7 +25,7 @@ function onSearchDev() {
     const repoId = inputRepoEl.value;
     const days = inputDaysEl.value;
 
-    getMostActiveDevs({userId, repoId,  days })
+    getMostActiveDevs({userId, repoId,  days }) 
         .then(users => renderUsers(users));
 };
 
