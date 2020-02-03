@@ -20,7 +20,7 @@ html {
   margin: auto;
   margin-top: 32px;
 }
-
+ 
 .list {
   width: 100%;
   padding: 0;
@@ -59,9 +59,8 @@ html {
     content: "+";
   }
 
-}
 
-.list-item__done  {
+.list-item_done {
   text-decoration: line-through;
   opacity: 0.7;
   background-color: #ffb79d;
