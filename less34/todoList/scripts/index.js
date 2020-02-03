@@ -2,7 +2,7 @@ import {initTodoListHandlers} from './todoList.js';
 import {renderTasks} from './renderer.js';
 import {getTasksList} from './tasksGateway.js';
 import {setItem} from './storage.js';
-
+// import {onDeleteTask} from './deleteTask.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
