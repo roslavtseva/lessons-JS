@@ -1,4 +1,4 @@
-const getUser = async userId => {
+export const getUser = async userId => {
     try {
         const response = await fetch (`https://api.github.com/users/${userId}`); //запрос на сайт 
         if(!response.ok){ //якщо корист не знайден то це значення буде false
