@@ -1,4 +1,4 @@
-export const getUser = async userId => {
+export const fetchUser = async userId => {
     try {
         const response = await fetch (`https://api.github.com/users/${userId}`); //запрос на сайт 
         if(!response.ok){ //якщо корист не знайден то це значення буде false
@@ -12,6 +12,6 @@ export const getUser = async userId => {
     }
     };
 
-getUser('facebook') //викл з айді користувача
+fetchUser('facebook') //викл з айді користувача
     .then(userData => console.log(userData))
     .catch(err => alert(err.message));
